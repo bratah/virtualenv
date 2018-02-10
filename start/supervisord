@@ -1,0 +1,11 @@
+#!/usr/bin/env bash 
+
+set -e
+
+# Print current environment
+echo "=> Current environment:"
+env
+
+# Start supervisor and pass any arguments
+echo "=> Starting supervisor ..."
+exec supervisord -c /etc/supervisor/supervisord.conf $@
